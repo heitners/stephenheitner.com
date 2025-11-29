@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stephen Heitner, MD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Stephen Heitner, MD – cardiologist, clinical researcher, and medical leader in cardiovascular drug development." />
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.1);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --link: #7dd3fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1d283a 0, #020617 55%, #000 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .title-block {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      letter-spacing: 0.03em;
+      margin: 0 0 8px;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      font-size: 0.96rem;
+      color: var(--text);
+      max-width: 560px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 999px;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      background: linear-gradient(90deg, rgba(56,189,248,0.05), rgba(8,47,73,0.7));
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .contact {
+      border-radius: 16px;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.15), rgba(15,23,42,1));
+      min-width: 220px;
+    }
+
+    .contact-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .contact-item {
+      font-size: 0.9rem;
+      margin: 2px 0;
+    }
+
+    main {
+      display: grid;
+      gap: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header {
+        align-items: flex-start;
+      }
+    }
+
+    section {
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top, rgba(15,118,110,0.12), var(--card));
+      box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+    }
+
+    section.secondary {
+      background: radial-gradient(circle at top, rgba(56,189,248,0.12), var(--card));
+    }
+
+    section h2 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 0 0 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    section h2::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56,189,248,0.65);
+    }
+
+    p {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .list li {
+      font-size: 0.94rem;
+      margin-bottom: 8px;
+      padding-left: 12px;
+      border-left: 2px solid rgba(31,41,55,0.9);
+    }
+
+    .list li span.label {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .pub-title {
+      font-weight: 500;
+    }
+
+    .pub-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(30,64,175,0.7);
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="title-block">
+        <h1>Stephen E. Heitner, MD</h1>
+        <div class="subtitle">
+          Cardiologist • Clinical Researcher • Drug Development Leader
+        </div>
+        <div class="tagline">
+          Focused on advancing therapies in hypertrophic cardiomyopathy and heart failure, bridging academic medicine, clinical trials, and industry leadership.
+        </div>
+        <div class="pill-row">
+          <div class="pill">Cardiovascular Drug Development</div>
+          <div class="pill">Hypertrophic Cardiomyopathy</div>
+          <div class="pill">Heart Failure</div>
+        </div>
+      </div>
+      <div class="contact">
+        <div class="contact-title">Contact</div>
+        <div class="contact-item">
+          Email:
+          <a href="mailto:your.email@domain.com">your.email@domain.com</a>
+        </div>
+        <div class="contact-item">
+          LinkedIn:
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener">Profile</a>
+        </div>
+        <div class="contact-item">
+          Location: Portland, Oregon, USA
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid">
+        <!-- Left column -->
+        <div>
+          <section class="secondary">
+            <h2>About</h2>
+            <p>
+              Stephen E. Heitner, MD is a cardiologist and clinical investigator with experience spanning
+              academic medicine, cardiovascular imaging, and late-stage drug development in heart failure and
+              hypertrophic cardiomyopathy.
+            </p>
+            <p class="muted">
+              This short bio is a placeholder — you can replace it with your official institutional or
+              company biography, or a concise paragraph tailored to media and conference use.
+            </p>
+          </section>
+
+          <section>
+            <h2>Selected Publications</h2>
+            <ul class="list">
+              <li>
+                <div class="pub-title">
+                  Example Paper Title in Hypertrophic Cardiomyopathy
+                </div>
+                <div class="pub-meta">
+                  <span>Journal of Cardiac Failure</span> • 2023 •
+                  <a href="#" target="_blank" rel="noopener">PubMed</a>
+                </div>
+              </li>
+              <li>
+                <div class="pub-title">
+                  Example Clinical Trial Results in Heart Failure
+                </div>
+                <div class="pub-meta">
+                  <span>Circulation</span> • 2022 •
+                  <a href="#" target="_blank" rel="noopener">Full text</a>
+                </div>
+              </li>
+              <li>
+                <div class="pub-title">
+                  Additional publications and abstracts available via PubMed and Google Scholar.
+                </div>
+                <div class="pub-meta">
+                  <a href="#" target="_blank" rel="noopener">Google Scholar</a> •
+                  <a href="#" target="_blank" rel="noopener">PubMed Search</a>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Right column -->
+        <div>
+          <section>
+            <h2>Clinical & Research Focus</h2>
+            <ul class="list">
+              <li>
+                <span class="label">Therapeutic Areas</span><br />
+                Hypertrophic cardiomyopathy (HCM), heart failure, cardiomyopathies, and inherited cardiovascular disease.
+              </li>
+              <li>
+                <span class="label">Methods</span><br />
+                Phase 2–3 clinical trials, cardiovascular imaging, exercise physiology, and patient-reported outcomes.
+              </li>
+            </ul>
+          </section>
+
+          <section class="secondary">
+            <h2>Links</h2>
+            <ul class="list">
+              <li>
+                <span class="label">Professional</span><br />
+                <a href="#" target="_blank" rel="noopener">LinkedIn</a><br />
+                <a href="#" target="_blank" rel="noopener">Institution/Company Profile</a>
+              </li>
+              <li>
+                <span class="label">Academic</span><br />
+                <a href="#" target="_blank" rel="noopener">PubMed Author Search</a><br />
+                <a href="#" target="_blank" rel="noopener">Google Scholar</a>
+              </li>
+            </ul>
+
+            <div class="chips">
+              <div class="chip">Keynote & panel speaking</div>
+              <div class="chip">Cardiovascular trials</div>
+              <div class="chip">HCM & HF</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Stephen B. Heitner. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
