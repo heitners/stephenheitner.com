@@ -112,23 +112,26 @@
       backdrop-filter: blur(8px);
     }
 
+    /* Avatar now uses initials, no external image needed */
     .avatar {
       width: 120px;
       height: 120px;
       border-radius: 999px;
-      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: #f9fafb;
       border: 2px solid rgba(250,204,21,0.85);
       box-shadow:
         0 14px 30px rgba(15,23,42,0.95),
         0 0 20px rgba(249,115,22,0.6);
-      background: #020617;
-    }
-
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(56,189,248,0.4), transparent 55%),
+        radial-gradient(circle at 80% 100%, rgba(249,115,22,0.6), transparent 55%),
+        #020617;
     }
 
     .contact {
@@ -301,8 +304,7 @@
 
       <div class="header-right">
         <div class="avatar">
-          <!-- Replace stephen-heitner.jpg with your uploaded headshot file name -->
-          <img src="stephen-heitner.jpg" alt="Portrait of Stephen B. Heitner" />
+          SH
         </div>
         <div class="contact">
           <div class="contact-title">Contact</div>
@@ -314,6 +316,13 @@
             LinkedIn:
             <a href="https://www.linkedin.com/in/stephen-heitner-b7872295/" target="_blank" rel="noopener">
               LinkedIn Profile
+            </a>
+          </div>
+          <div class="contact-item">
+            Company:
+            <a href="https://cytokinetics.com/company/senior-management/team-member/stephen-b-heitner/"
+               target="_blank" rel="noopener">
+              Cytokinetics Profile
             </a>
           </div>
           <div class="contact-item">
@@ -334,10 +343,6 @@
               academic medicine, cardiovascular imaging, and late-stage drug development in heart failure and
               hypertrophic cardiomyopathy.
             </p>
-            <p class="muted">
-              This short bio is a placeholder — you can replace it with your official institutional or
-              company biography, or a concise paragraph tailored to media and conference use.
-            </p>
           </section>
 
           <section>
@@ -349,7 +354,7 @@
                 </div>
                 <div class="pub-meta">
                   <span>New England Journal of Medicine</span> • 2024 •
-                  <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2401424" target="_blank" rel="noopener">
+                  <a href="https://www.nejm.org/" target="_blank" rel="noopener">
                     NEJM
                   </a>
                 </div>
@@ -360,7 +365,7 @@
                 </div>
                 <div class="pub-meta">
                   <span>New England Journal of Medicine</span> • 2025 •
-                  <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2504654" target="_blank" rel="noopener">
+                  <a href="https://www.nejm.org/" target="_blank" rel="noopener">
                     NEJM
                   </a>
                 </div>
@@ -375,9 +380,9 @@
                     Google Scholar
                   </a>
                   •
-                  <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Heitner+SB%5BAuthor%5D"
+                  <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Heitner+SB"
                      target="_blank" rel="noopener">
-                    PubMed Author Search
+                    PubMed Search
                   </a>
                 </div>
               </li>
@@ -408,10 +413,14 @@
             <ul class="list">
               <li>
                 <span class="label">Professional</span><br />
-                <a href="https://www.linkedin.com/in/stephen-heitner-b7872295/" target="_blank" rel="noopener">
-                  LinkedIn Profile
+                <a href="https://cytokinetics.com/company/senior-management/team-member/stephen-b-heitner/"
+                   target="_blank" rel="noopener">
+                  Cytokinetics Profile
                 </a><br />
-                <a href="#" target="_blank" rel="noopener">Institution/Company Profile</a>
+                <a href="https://www.linkedin.com/in/stephen-heitner-b7872295/"
+                   target="_blank" rel="noopener">
+                  LinkedIn Profile
+                </a>
               </li>
               <li>
                 <span class="label">Academic</span><br />
@@ -419,9 +428,9 @@
                    target="_blank" rel="noopener">
                   Google Scholar
                 </a><br />
-                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Heitner+SB%5BAuthor%5D"
+                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Heitner+SB"
                    target="_blank" rel="noopener">
-                  PubMed Author Search
+                  PubMed Search
                 </a>
               </li>
             </ul>
@@ -446,4 +455,4 @@
   </script>
 </body>
 </html>
-Updated again
+Fixed
