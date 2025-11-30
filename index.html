@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Stephen Heitner, MD</title>
+  <title>Stephen B. Heitner, MD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Stephen Heitner, MD – cardiologist, clinical researcher, and medical leader in cardiovascular drug development." />
+  <meta name="description" content="Stephen B. Heitner, MD – cardiologist, clinical researcher, and medical leader in cardiovascular drug development." />
   <style>
     :root {
-      --bg: #0b1120;
+      --bg: #020617;
       --bg-alt: #020617;
       --card: #020617;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56,189,248,0.1);
+      --accent: #f97316;      /* warm orange accent */
+      --accent-soft: rgba(249,115,22,0.16);
       --text: #e5e7eb;
       --muted: #9ca3af;
       --border: #1f2937;
-      --link: #7dd3fc;
+      --link: #facc15;        /* bright golden links */
     }
 
     * {
@@ -26,14 +26,19 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
         "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1d283a 0, #020617 55%, #000 100%);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(56,189,248,0.3) 0, transparent 40%),
+        radial-gradient(circle at 90% 10%, rgba(249,115,22,0.35) 0, transparent 45%),
+        radial-gradient(circle at 50% 120%, rgba(22,163,74,0.35) 0, #020617 70%);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
     }
 
     a {
       color: var(--link);
       text-decoration: none;
+      font-weight: 500;
     }
     a:hover {
       text-decoration: underline;
@@ -59,7 +64,7 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 3vw, 2.6rem);
+      font-size: clamp(2.1rem, 3.1vw, 2.8rem);
       letter-spacing: 0.03em;
       margin: 0 0 8px;
     }
@@ -89,18 +94,25 @@
       letter-spacing: 0.08em;
       border-radius: 999px;
       padding: 4px 10px;
-      border: 1px solid var(--border);
-      background: linear-gradient(90deg, rgba(56,189,248,0.05), rgba(8,47,73,0.7));
+      border: 1px solid rgba(148,163,184,0.6);
+      background: linear-gradient(
+        135deg,
+        rgba(248,250,252,0.03),
+        rgba(15,23,42,0.95)
+      );
       color: var(--muted);
       white-space: nowrap;
+      backdrop-filter: blur(8px);
     }
 
     .contact {
-      border-radius: 16px;
-      padding: 12px 16px;
-      border: 1px solid var(--border);
-      background: radial-gradient(circle at top left, rgba(56,189,248,0.15), rgba(15,23,42,1));
-      min-width: 220px;
+      border-radius: 18px;
+      padding: 14px 18px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background:
+        linear-gradient(135deg, rgba(15,23,42,0.96), rgba(30,64,175,0.6));
+      box-shadow: 0 18px 45px rgba(15,23,42,0.9);
+      min-width: 240px;
     }
 
     .contact-title {
@@ -108,12 +120,12 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--muted);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .contact-item {
       font-size: 0.9rem;
-      margin: 2px 0;
+      margin: 3px 0;
     }
 
     main {
@@ -137,15 +149,19 @@
     }
 
     section {
-      border-radius: 18px;
+      border-radius: 20px;
       padding: 18px 18px 16px;
-      border: 1px solid var(--border);
-      background: radial-gradient(circle at top, rgba(15,118,110,0.12), var(--card));
-      box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+      border: 1px solid rgba(51,65,85,0.9);
+      background:
+        radial-gradient(circle at top, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+      box-shadow: 0 18px 40px rgba(15,23,42,0.85);
+      backdrop-filter: blur(10px);
     }
 
     section.secondary {
-      background: radial-gradient(circle at top, rgba(56,189,248,0.12), var(--card));
+      background:
+        radial-gradient(circle at top, var(--accent-soft), rgba(15,23,42,0.98));
+      border-color: rgba(249,115,22,0.4);
     }
 
     section h2 {
@@ -165,7 +181,9 @@
       height: 8px;
       border-radius: 999px;
       background: var(--accent);
-      box-shadow: 0 0 12px rgba(56,189,248,0.65);
+      box-shadow:
+        0 0 10px rgba(249,115,22,0.8),
+        0 0 22px rgba(56,189,248,0.6);
     }
 
     p {
@@ -188,7 +206,7 @@
       font-size: 0.94rem;
       margin-bottom: 8px;
       padding-left: 12px;
-      border-left: 2px solid rgba(31,41,55,0.9);
+      border-left: 2px solid rgba(51,65,85,0.9);
     }
 
     .list li span.label {
@@ -218,11 +236,11 @@
 
     .chip {
       font-size: 0.75rem;
-      padding: 2px 8px;
+      padding: 3px 9px;
       border-radius: 999px;
-      background: rgba(15,23,42,0.85);
-      border: 1px solid rgba(30,64,175,0.7);
-      color: var(--muted);
+      background: radial-gradient(circle at top, rgba(30,64,175,0.9), rgba(15,23,42,0.95));
+      border: 1px solid rgba(191,219,254,0.5);
+      color: #e5e7eb;
     }
 
     footer {
@@ -237,7 +255,7 @@
   <div class="page">
     <header>
       <div class="title-block">
-        <h1>Stephen E. Heitner, MD</h1>
+        <h1>Stephen B. Heitner, MD</h1>
         <div class="subtitle">
           Cardiologist • Clinical Researcher • Drug Development Leader
         </div>
@@ -254,11 +272,13 @@
         <div class="contact-title">Contact</div>
         <div class="contact-item">
           Email:
-          <a href="mailto:your.email@domain.com">your.email@domain.com</a>
+          <a href="mailto:sheitner@cytokinetics.com">sheitner@cytokinetics.com</a>
         </div>
         <div class="contact-item">
           LinkedIn:
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener">Profile</a>
+          <a href="https://www.linkedin.com/in/stephen-heitner-b7872295/" target="_blank" rel="noopener">
+            LinkedIn Profile
+          </a>
         </div>
         <div class="contact-item">
           Location: Portland, Oregon, USA
@@ -273,7 +293,7 @@
           <section class="secondary">
             <h2>About</h2>
             <p>
-              Stephen E. Heitner, MD is a cardiologist and clinical investigator with experience spanning
+              Stephen B. Heitner, MD is a cardiologist and clinical investigator with experience spanning
               academic medicine, cardiovascular imaging, and late-stage drug development in heart failure and
               hypertrophic cardiomyopathy.
             </p>
@@ -338,7 +358,9 @@
             <ul class="list">
               <li>
                 <span class="label">Professional</span><br />
-                <a href="#" target="_blank" rel="noopener">LinkedIn</a><br />
+                <a href="https://www.linkedin.com/in/stephen-heitner-b7872295/" target="_blank" rel="noopener">
+                  LinkedIn Profile
+                </a><br />
                 <a href="#" target="_blank" rel="noopener">Institution/Company Profile</a>
               </li>
               <li>
